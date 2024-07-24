@@ -12,7 +12,7 @@ from .views import (
 )
 
 urlpatterns = [
-    path('', TaskListView.as_view(), name='home'),
+    path('', TaskListView.as_view(), name='home'),  # Головна сторінка
     path('task/add/', TaskCreateView.as_view(), name='task-add'),
     path('task/update/<int:pk>/', TaskUpdateView.as_view(), name='task-update'),
     path('task/delete/<int:pk>/', TaskDeleteView.as_view(), name='task-delete'),
