@@ -2,14 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
 }
 
 
 .header {
     background-color: #007bff;
     color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
     text-align: center;
 }
 
@@ -17,42 +17,81 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 15px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
 }
 
 .header a:hover {
-    text-decoration: underline;
+    background-color: #0056b3;
+    color: #fff;
 }
 
 
 .sidebar {
     width: 200px;
-    background-color: #343a40;
-    color: #fff;
-    padding: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: fixed;
-    height: 100%;
+    top: 10px;
+    left: 10px;
 }
 
 .sidebar a {
-    color: #fff;
+    color: #007bff;
     text-decoration: none;
     display: block;
     padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .sidebar a:hover {
-    background-color: #495057;
+    background-color: #e9ecef;
+    color: #0056b3;
 }
 
 
-.main-content {
-    margin-left: 220px;
+.content {
+    margin-left: 240px;
     padding: 20px;
+    position: relative;
 }
 
-h1, h2, h3 {
-    color: #333;
+
+.add-tag-btn,
+.add-task-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+}
+
+.add-tag-btn {
+    right: 20px;
+    top: 20px;
+}
+
+.add-task-btn {
+    right: 20px;
+    top: 60px;
+}
+
+.add-tag-btn:hover,
+.add-task-btn:hover {
+    background-color: #0056b3;
 }
 
 
@@ -65,6 +104,8 @@ h1, h2, h3 {
 .table th, .table td {
     border: 1px solid #ddd;
     padding: 10px;
+    text-align: left;
+    vertical-align: top;
 }
 
 .table th {
@@ -74,6 +115,11 @@ h1, h2, h3 {
 
 .table tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+
+.table .actions {
+    text-align: right;
 }
 
 
@@ -143,30 +189,23 @@ form button:hover {
     background-color: #0056b3;
 }
 
-.navbar {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-bottom: 2px solid #ddd;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.navbar-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 10px 15px;
-    margin-right: 10px;
-    text-decoration: none;
+h1 {
+    margin-left: 20px;
     color: #333;
+}
+
+.badge.bg-success {
+    background-color: #28a745;
+    color: #fff;
+    padding: 5px 10px;
     border-radius: 5px;
-    font-weight: bold;
+    font-size: 14px;
 }
 
-.navbar-item:hover {
-    background-color: #f9f9f9;
-}
-
-.container {
-    padding: 20px;
+.badge.bg-danger {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
 }
