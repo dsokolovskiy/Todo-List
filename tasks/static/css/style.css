@@ -142,3 +142,31 @@ form button {
 form button:hover {
     background-color: #0056b3;
 }
+
+.navbar {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.navbar-item:hover {
+    background-color: #f9f9f9;
+}
+
+.container {
+    padding: 20px;
+}
