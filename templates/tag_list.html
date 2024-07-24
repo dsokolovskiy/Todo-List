@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Tag List</h1>
+  <a href="{% url 'tag-add' %}" class="btn btn-primary">Add New Tag</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for tag in tags %}
+        <tr>
+          <td>{{ tag.name }}</td>
+          <td>
+            <a href="{% url 'tag-update' tag.pk %}" class="btn btn-secondary">Edit</a>
+            <a href="{% url 'tag-delete' tag.pk %}" class="btn btn-danger">Delete</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
