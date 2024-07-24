@@ -1,1 +1,22 @@
 {% extends "base.html" %}
+
+{% block content %}
+<h1>ToDo List</h1>
+<a href="{% url 'task-add' %}" class="button button-primary">Add New Task</a>
+<ul>
+  {% for task in tasks %}
+    <li>
+      {{ task.content }} -
+      {% if task.is_done %}
+      <span class="badge bg-success">Done</span>
+      <a href="{% url 'task-toggle-status' task.pk %}" class="button button-warning">Undo</a>
+      {% else %}
+        <span class="badge bg-danger">Not Done</span>
+        <a href="{% url 'task-toggle-status' task.pk %}" class="button button-success">Complete</a>
+      {% endif %}
+    <a href="{% url 'task-update' task.pk %}" class="button button-secondary">Edit</a>
+    <a href="{% url 'task-delete' task.pk %}" class="button button-danger">Delete</a>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
